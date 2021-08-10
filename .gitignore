@@ -1,0 +1,10 @@
+.DS_Store
+.bundle
+.vagrant
+*.log
+ansible.log
+package.box
+playbook.retry
+provision-post.sh
+provision-pre.sh
+vendor

@@ -1,0 +1,55 @@
+#
+# General Settings
+#
+# Name of the box to be downloaded
+box: bento/ubuntu-20.04
+
+#
+# Virtual Machine Settings
+#
+memory: 1024
+cpus: 1
+
+#
+# Network Settings
+#
+hostname: local.lamp
+ip: 192.168.33.10
+
+#
+# Path Settings
+#
+synced_folder: public
+document_root: /var/www/html
+
+#
+# Composer
+#
+composer_version: 2.1.3
+
+#
+# RubyGems
+#
+ruby_gems:
+  - bundler
+  # - wordmove
+
+#
+# DB
+#
+db_host: localhost
+db_name: lamp
+db_user: admin
+db_pass: admin
+
+#
+# WordPress Path
+#
+wp_siteurl: ''  # Path to the WP_SITEURL like "wp"
+wp_home: ''     # Path to the WP_HOME like "wp"
+
+
+#
+# Mail Service
+#
+mailcatcher: true
