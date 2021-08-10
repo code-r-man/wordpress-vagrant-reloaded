@@ -24,12 +24,14 @@
       mode: 0755
     tags:
       - packages
+
   - name: Download Wordpress
     command: |
       wp core download
       --path={{ path }}
       --version={{ settings.version }}
       --force
+
   # wp-config.php
   - name: Create temporary file for extra-php in wp-config.php
     template:

@@ -28,6 +28,12 @@ document_root: /var/www/html
 composer_version: 2.1.3
 
 #
+# Node JS
+#
+node_version: 10.x
+# node_version: 10.x
+
+#
 # RubyGems
 #
 ruby_gems:
@@ -47,7 +53,7 @@ version: latest
 lang: en_US
 title: Welcome to the Local Wordpress
 multisite: false
-rewrite_structure: false
+rewrite_structure: /%year%/%monthnum%/%day%/%postname%/
 # rewrite_structure: /archives/%post_id%
 
 #
