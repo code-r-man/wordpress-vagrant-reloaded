@@ -47,7 +47,8 @@ version: latest
 lang: en_US
 title: Welcome to the Local Wordpress
 multisite: false
-rewrite_structure: /archives/%post_id%
+rewrite_structure: false
+# rewrite_structure: /archives/%post_id%
 
 #
 # WordPress User
@@ -70,7 +71,9 @@ db_pass: wordpress
 # Plugin's slug or url to the plugin's slug.
 #
 plugins:
-- logbook
+  - classic-editor
+# - logbook
+
 #
 # WordPress Default Theme
 # Theme's slug or url to the theme's .zip.

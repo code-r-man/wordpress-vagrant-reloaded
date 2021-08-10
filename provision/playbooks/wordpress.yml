@@ -61,14 +61,17 @@
       --admin_user={{ settings.admin_user }}
       --admin_password={{ settings.admin_pass }}
       --admin_email={{ settings.admin_email }}
+
   - name: Create index.php for wp_siteurl
     when: settings.wp_siteurl != ''
     template:
       src: templates/index.php
       dest: /tmp/index.php
+
   - name: Move index.php for wp_siteurl
     when: settings.wp_siteurl != ''
     command: "mv /tmp/index.php {{ settings.document_root }}/index.php"
+
   # Import Options
   - name: Run `wp options update`
     command: |
@@ -76,3 +79,58 @@
       --path={{ path }}
     with_dict: "{{ settings.options }}"
 
+  - name: Run `wp core language install`
+    command: |
+      wp core language install {{ settings.lang }}
+      --path={{ path }}
+      --activate
+
+  # Install Plugins
+  - name: Run `wp plugin install`
+    command: |
+      wp plugin install {{ item }}
+      --activate
+      --path={{ path }}
+      --force
+    with_items: "{{ settings.plugins | default([]) }}"
+
+  # Install Theme
+  - name: Install theme
+    command: |
+      wp theme install {{ settings.theme }}
+      --path={{ path }} --activate --force
+    when: settings.theme != ''
+
+  # Setting Permalink
+  - name: Run `wp rewrite structure`
+    when: settings.rewrite_structure
+    command: |
+      wp rewrite structure {{ settings.rewrite_structure }}
+      --path={{ path }}
+  - name: Flush rewrite rules
+    when: settings.rewrite_structure
+    command: |
+      wp rewrite flush
+      --hard
+      --path={{ path }}
+
+  # multisite Settings
+  - name: Run `wp core multisite-convert`
+    when: settings.multisite
+    command: |
+      wp core multisite-convert
+      --path={{ path }}
+  - name: Create `.htaccess` for multisite
+    when: settings.multisite
+    template:
+      src: templates/multisite-htaccess
+      dest: /tmp/.htaccess
+  - name: Move `.htaccess` for multisite
+    when: settings.multisite
+    command: "mv /tmp/.htaccess {{ settings.document_root }}/.htaccess"
+  - name: Setting up Wordpress multisite options
+    command: |
+      wp network meta update 1 {{ item.key }} '{{ item.value }}'
+      --path={{ path }}
+    with_dict: "{{ settings.multisite_options | default({}) }}"
+    when: settings.multisite
