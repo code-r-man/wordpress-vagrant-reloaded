@@ -1,0 +1,209 @@
+---
+- hosts: all
+  become: yes
+  vars:
+    mysql_root_pass: root
+    path: "{{ settings.document_root }}/{{ settings.wp_siteurl }}"
+    user: "{{ ansible_env.USER | default( 'ubuntu' ) }}"
+
+  tasks:
+  # Apache2 server
+  - name: Install apache2 server
+    apt:
+      name: apache2
+      update_cache: yes
+  - name: Activate mod rewrite
+    apache2_module:
+      state: present
+      name: rewrite
+  - name: Activate mod ssl
+    apache2_module:
+      state: present
+      name: ssl
+  - name: Make sure apache is running
+    ansible.builtin.service:
+      name: apache2
+      state: started
+      enabled: true
+
+  #MySQL
+  # Set default MySQL user and password
+  - name: Place ~/.my.cnf
+    template:
+      src: templates/.my.cnf
+      dest: "{{ ansible_env.HOME }}/.my.cnf"
+      owner: vagrant
+      group: vagrant
+
+  - name: Set MySQL root password before installing
+    debconf:
+      name: mysql-server
+      question: mysql-server/root_password
+      value: "{{mysql_root_pass | quote}}"
+      vtype: password
+
+  - name: Confirm MySQL root password before installing
+    debconf:
+      name: mysql-server
+      question: mysql-server/root_password_again
+      value: "{{mysql_root_pass | quote}}"
+      vtype: password
+
+  - name: Install MySQL
+    apt:
+      pkg: mysql-server
+      state: latest
+      update_cache: yes
+
+  - name: Make sure MySQL is running
+    ansible.builtin.service:
+      name: mysql
+      state: started
+      enabled: true
+
+  - name: Install PIP
+    apt:
+      pkg: python3-pip
+      state: latest
+      update_cache: yes
+
+  - name: Make sure PySQL is intalled
+    become: true
+    pip:
+      name: PyMySQL
+      state: present
+
+  - name: Create Database
+    become: yes
+    mysql_db:
+      login_user: root
+      login_password: "{{mysql_root_pass | quote}}"
+      name: "{{ settings.db_name }}"
+      state: present
+
+  - name: Create MySQL user
+    become: yes
+    mysql_user:
+      login_user: root
+      login_password: "{{mysql_root_pass | quote}}"
+      name: "{{ settings.db_user }}"
+      password: "{{ settings.db_pass }}"
+      priv: "{{ settings.db_name }}.*:ALL"
+      host: "%"
+      state: present
+
+  # PHP
+  - name: Install PHP
+    apt:
+      name: php
+      update_cache: yes
+  - name: Install PHP modules
+    apt:
+      pkg:
+      - php-pear
+      - php-fpm
+      - php-dev
+      - php-curl
+      - php-xmlrpc
+      - php-gd
+      - php-mysql
+      - php-mysqlnd
+      - php-mysqli
+      - php-mbstring
+      - php-xml
+      - libapache2-mod-php
+      - php-cli
+      - php-intl
+      - php-opcache
+      - php-exif
+      - php-calendar
+      - php-pdo
+      - php-ffi
+      - php-fileinfo
+      - php-ftp
+      - php-iconv
+      - php-json
+      - php-phar
+      - php-posix
+      - php-readline
+      - php-shmop
+      - php-simplexml
+      - php-sockets
+      - php-sysvmsg
+      - php-sysvsem
+      - php-sysvshm
+      - php-tokenizer
+      - php-xmlreader
+      - php-xmlrpc
+      - php-xmlwriter
+      - php-xsl
+      - php-zip
+      - unzip
+      update_cache: yes
+
+  # Mailcatcher
+  - name: Install MailCatcher Dependencies
+    apt:
+      name:
+        - ruby
+        - ruby-dev
+        - build-essential
+        - sqlite3
+        - libsqlite3-dev
+      update_cache: yes
+
+  - name: Install MailCatcher
+    when: settings.mailcatcher
+    become: yes
+    gem:
+      name: mailcatcher
+      state: latest
+      user_install: no
+
+  - name: Add mailcatcher to service
+    when: settings.mailcatcher
+    become: yes
+    template:
+      src: templates/mailcatcher.service
+      dest: /etc/systemd/system/mailcatcher.service
+      mode: 0644
+
+  - name: Start mailcatcher
+    when: settings.mailcatcher
+    become: yes
+    service: name=mailcatcher enabled=yes state=started
+
+  - name: Update php.ini for mailcatcher
+    when: settings.mailcatcher
+    become: yes
+    lineinfile:
+      dest: /etc/php/7.4/cli/php.ini
+      create: yes
+      regexp: ';sendmail_path'
+      line: "sendmail_path = /usr/bin/env catchmail"
+
+  - name: Update php.ini for mailcatcher - apache2
+    when: settings.mailcatcher
+    become: yes
+    lineinfile:
+      dest: /etc/php/7.4/apache2/php.ini
+      create: yes
+      regexp: ';sendmail_path'
+      line: "sendmail_path = /usr/bin/env catchmail"
+
+  - name: Restart Apache2
+    ansible.builtin.systemd:
+      name: apache2
+      state: restarted
+
+  # Composer
+  - name: Download Composer
+    become: yes
+    get_url:
+      url: https://getcomposer.org/installer
+      dest: /tmp/composer-setup.php
+      mode: 0755
+      force: yes
+  - name: Run the Composer installer
+    become: yes
+    shell: "php /tmp/composer-setup.php --install-dir=/usr/local/bin --filename=composer"

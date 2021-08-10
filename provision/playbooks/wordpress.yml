@@ -1,0 +1,78 @@
+---
+- hosts: all
+  vars:
+    path: "{{ settings.document_root }}/{{ settings.wp_siteurl }}"
+
+  tasks:
+
+  # Wordpress
+  - name: "Remove index.html from document root"
+    become: yes
+    file:
+      path: "{{ path }}/index.html"
+      state: absent
+
+  # WP-CLI
+  - name: Install WP-CLI
+    become: yes
+    get_url:
+      url: "https://raw.github.com/wp-cli/builds/gh-pages/phar/wp-cli.phar"
+      dest: "/usr/bin/wp"
+      force: true
+      owner: root
+      group: root
+      mode: 0755
+    tags:
+      - packages
+  - name: Download Wordpress
+    command: |
+      wp core download
+      --path={{ path }}
+      --version={{ settings.version }}
+      --force
+  # wp-config.php
+  - name: Create temporary file for extra-php in wp-config.php
+    template:
+      src: templates/extra-wp-config.php
+      dest: "/tmp/extra-wp-config.php"
+  - name: Run `wp core config`
+    shell: |
+       wp core config \
+       --force \
+       --path={{ path }} \
+       --dbhost={{ settings.db_host }} \
+       --dbname={{ settings.db_name }} \
+       --dbuser={{ settings.db_user }} \
+       --dbpass={{ settings.db_pass }} \
+       --dbprefix={{ settings.db_prefix }} \
+       --locale={{ settings.lang }} \
+       --extra-php < /tmp/extra-wp-config.php
+  # Reset Database
+  - name: Run `wp db reset`
+    command: wp db reset --yes --path={{ path }}
+    when: settings.reset_db_on_provision
+  # install wordpress
+  - name: Install Wordpress
+    command: |
+      wp core install
+      --path={{ path }}
+      --url=http://{{ settings.hostname }}/{{ settings.wp_siteurl }}
+      --title='{{ settings.title }}'
+      --admin_user={{ settings.admin_user }}
+      --admin_password={{ settings.admin_pass }}
+      --admin_email={{ settings.admin_email }}
+  - name: Create index.php for wp_siteurl
+    when: settings.wp_siteurl != ''
+    template:
+      src: templates/index.php
+      dest: /tmp/index.php
+  - name: Move index.php for wp_siteurl
+    when: settings.wp_siteurl != ''
+    command: "mv /tmp/index.php {{ settings.document_root }}/index.php"
+  # Import Options
+  - name: Run `wp options update`
+    command: |
+      wp option update {{ item.key }} '{{ item.value }}'
+      --path={{ path }}
+    with_dict: "{{ settings.options }}"
+

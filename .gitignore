@@ -8,3 +8,5 @@ playbook.retry
 provision-post.sh
 provision-pre.sh
 vendor
+
+public/
