@@ -2,6 +2,7 @@
 
 ## What's installed
 
+* Wordpress
 * Apache 2
 * MySQL
 * PHP 7.4
