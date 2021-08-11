@@ -227,3 +227,11 @@
       # update_cache: yes
       name: nodejs
       state: present
+
+  handlers:
+      - name: restart apache
+        become: yes
+        service: name=apache2 state=restarted
+      - name: restart mysql
+        become: yes
+        service: name=mysql state=restarted

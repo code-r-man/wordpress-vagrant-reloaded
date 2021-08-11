@@ -1,0 +1,58 @@
+---
+- hosts: all
+  vars:
+    user: "{{ ansible_env.USER | default( 'ubuntu' ) }}"
+
+  tasks:
+
+  # Configure mutex for apache
+  - name: Create mutex config file (apache)
+    become: yes
+    template:
+      src: templates/mutex-file.conf
+      dest: /etc/apache2/conf-available/mutex-file.conf
+
+  - name: Enable mutex configuration
+    become: yes
+    shell: a2enconf mutex-file.conf
+
+  # Restart apache
+  - name: Reload apache settings
+    become: yes
+    shell: systemctl reload apache2
+
+  - name: Restart apache
+    become: yes
+    service: name=apache2 state=restarted
+
+  - name: "Replacing the Apache User"
+    become: yes
+    replace:
+      dest: /etc/apache2/envvars
+      regexp: APACHE_RUN_USER=.*
+      replace: "APACHE_RUN_USER={{ user }}"
+    notify:
+      - restart apache
+
+  - name: "Replacing the Apache Group"
+    become: yes
+    replace:
+      dest: /etc/apache2/envvars
+      regexp: APACHE_RUN_GROUP=.*
+      replace: "APACHE_RUN_GROUP={{ user }}"
+    notify:
+      - restart apache
+
+  - name: Make sure apache is running
+    ansible.builtin.service:
+      name: apache2
+      state: started
+      enabled: true
+
+  handlers:
+      - name: restart apache
+        become: yes
+        service: name=apache2 state=restarted
+      - name: restart mysql
+        become: yes
+        service: name=mysql state=restarted

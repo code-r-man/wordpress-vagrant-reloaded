@@ -1,3 +1,4 @@
 ---
 - import_playbook: playbooks/lamp.yml
+- import_playbook: playbooks/middleware.yml
 - import_playbook: playbooks/wordpress.yml
