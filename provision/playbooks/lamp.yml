@@ -122,6 +122,7 @@
       - php-fileinfo
       - php-ftp
       - php-iconv
+      - php-imagick
       - php-json
       - php-phar
       - php-posix
@@ -140,6 +141,12 @@
       - php-zip
       - unzip
       update_cache: yes
+
+  - name: Remove PHP file upload limit
+    lineinfile:
+      path: /etc/php/7.4/apache2/php.ini
+      regexp: '^upload_max_filesize ='
+      line: 'upload_max_filesize = 0'
 
   # Mailcatcher
   - name: Install MailCatcher Dependencies
