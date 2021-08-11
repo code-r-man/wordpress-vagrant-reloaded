@@ -43,6 +43,38 @@
     notify:
       - restart apache
 
+  # Setup Document Root
+  - name: Place /etc/apache2/sites-available/site.conf
+    become: yes
+    template:
+      src: templates/site.conf
+      dest: /etc/apache2/sites-available/000-default.conf
+    notify:
+      - restart apache
+
+  - name: "Disable keepalive"
+    become: yes
+    replace:
+      dest: /etc/apache2/apache2.conf
+      regexp: KeepAlive .*
+      replace: "KeepAlive Off"
+    notify:
+      - restart apache
+
+  - name: "Setup timeout"
+    become: yes
+    replace:
+      dest: /etc/apache2/apache2.conf
+      regexp: Timeout .*
+      replace: "Timeout 10"
+    notify:
+      - restart apache
+
+  # enable wordpress.conf
+  - name: Enable virtual host for WordPress
+    become: yes
+    command: a2ensite 000-default
+
   - name: Make sure apache is running
     ansible.builtin.service:
       name: apache2

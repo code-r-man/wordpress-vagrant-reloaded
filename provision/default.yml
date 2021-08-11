@@ -53,7 +53,7 @@ version: latest
 lang: en_US
 title: Welcome to the Local Wordpress
 multisite: false
-rewrite_structure: /%year%/%monthnum%/%day%/%postname%/
+rewrite_structure: false
 # rewrite_structure: /archives/%post_id%
 
 #
