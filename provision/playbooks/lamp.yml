@@ -208,11 +208,12 @@
     become: yes
     shell: "php /tmp/composer-setup.php --install-dir=/usr/local/bin --filename=composer"
 
-  # NVM/Node
+  # Node
   - name: "Download Node JS"
-    warn: false
     shell:
       cmd: curl -fsSL https://deb.nodesource.com/setup_{{ settings.node_version }} | sudo -E bash -
+    args:
+      warn: false
 
   - name: "Install Node JS"
     apt:
