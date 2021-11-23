@@ -1,4 +1,4 @@
-# Wordpress on Ubuntu/Xenial6
+# Wordpress on Ubuntu/Xenial64
 
 ## What's installed
 
