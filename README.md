@@ -1,4 +1,4 @@
-# Ubuntu/Xenial64 based LAMP serrver
+# Wordpress on Ubuntu/Xenial6
 
 ## What's installed
 
