@@ -4,3 +4,6 @@
 [Service]
  Type=simple
  ExecStart=/usr/local/bin/mailcatcher --foreground --http-ip=0.0.0.0 --no-quit
+
+[Install]
+ WantedBy=multi-user.target
