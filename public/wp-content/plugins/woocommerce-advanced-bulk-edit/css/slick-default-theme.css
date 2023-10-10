@@ -1,0 +1,118 @@
+/*
+IMPORTANT:
+In order to preserve the uniform grid appearance, all cell styles need to have padding, margin and border sizes.
+No built-in (selected, editable, highlight, flashing, invalid, loading, :focus) or user-specified CSS
+classes should alter those!
+*/
+
+.slick-header-columns {
+  background: url('../images/header-columns-bg.gif') repeat-x center bottom !important;
+  border-bottom: 1px solid silver !important;
+}
+
+.slick-header-column {
+  background: url('../images/header-columns-bg.gif') repeat-x center bottom !important;
+  border-right: 1px solid silver !important;
+}
+
+.slick-header-column:hover, .slick-header-column-active {
+  background: white url('../images/header-columns-over-bg.gif') repeat-x center bottom !important;
+}
+
+.slick-headerrow {
+  background: #fafafa !important;
+}
+
+.slick-headerrow-column {
+  background: #fafafa !important;
+  border-bottom: 0 !important;
+  height: 100% !important;
+}
+
+.slick-row.ui-state-active {
+  background: #F5F7D7 !important;
+}
+
+.slick-row {
+  position: absolute !important;
+  background: white !important;
+  border: 0px !important;
+  line-height: 20px !important;
+}
+
+.slick-row.selected {
+  z-index: 10 !important;
+  background: #DFE8F6 !important;
+}
+
+.slick-cell {
+  padding-left: 4px !important;
+  padding-right: 4px !important;
+}
+
+.slick-group {
+  border-bottom: 2px solid silver !important;
+}
+
+.slick-group-toggle {
+  width: 9px !important;
+  height: 9px !important;
+  margin-right: 5px !important;
+}
+
+.slick-group-toggle.expanded {
+  background: url(../images/collapse.gif) no-repeat center center !important;
+}
+
+.slick-group-toggle.collapsed {
+  background: url(../images/expand.gif) no-repeat center center !important;
+}
+
+.slick-group-totals {
+  color: gray !important;
+  background: white !important;
+}
+
+.slick-cell.selected {
+  background-color: beige !important;
+}
+
+.slick-cell.active {
+  border-color: gray !important;
+  border-style: solid !important;
+}
+
+.slick-sortable-placeholder {
+  background: silver !important;
+}
+
+.slick-row.odd {
+  background: #fafafa !important;
+}
+
+.slick-row.ui-state-active {
+  background: #F5F7D7 !important;
+}
+
+.slick-row.loading {
+  opacity: 0.5 !important;
+  filter: alpha(opacity = 50) !important;
+}
+
+.slick-cell.invalid {
+  border-color: red !important;
+  -moz-animation-duration: 0.2s !important;
+  -webkit-animation-duration: 0.2s !important;
+  -moz-animation-name: slickgrid-invalid-hilite !important;
+  -webkit-animation-name: slickgrid-invalid-hilite !important;  
+}
+
+@-moz-keyframes slickgrid-invalid-hilite {
+  from { box-shadow: 0 0 6px red !important; }
+  to { box-shadow: none !important; }
+}
+
+@-webkit-keyframes slickgrid-invalid-hilite {
+  from { box-shadow: 0 0 6px red !important; }
+  to { box-shadow: none !important; }
+}

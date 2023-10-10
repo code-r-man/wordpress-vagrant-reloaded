@@ -1,0 +1,1278 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head lang="en">
+	<meta http-equiv="content-type" content="text/html;charset=utf-8">
+	<title>Advanced Bulk Edit Documentation</title>
+	<!-- Framework CSS -->
+	<link rel="stylesheet" href="assets/blueprint-css/screen.css" type="text/css" media="screen, projection">
+	<link rel="stylesheet" href="assets/blueprint-css/print.css" type="text/css" media="print">
+	<!--[if lt IE 8]><link rel="stylesheet" href="assets/blueprint-css/ie.css" type="text/css" media="screen, projection"><![endif]-->
+	<link rel="stylesheet" href="assets/blueprint-css/plugins/fancy-type/screen.css" type="text/css" media="screen, projection">
+	<style type="text/css" media="screen">
+		p, table, hr, .box {
+			margin-bottom:25px;
+		}
+		body {
+			font-size: 15px;
+		}
+		.box p {
+			margin-bottom:10px;
+		}
+		.thumbnailContainer {
+				text-align: center;
+		}
+		.thumbnailContainerli {
+			text-align: center;
+			margin-bottom:8px;
+			margin-top:8px;
+		}
+		.thumbnail {
+			border: 1px solid #ccc;
+			padding: 1px;
+		}
+		.basicTable {
+			border-collapse: collapse;
+		}
+		.basicTable td {
+			border: 1px solid #ccc;
+		}
+		.basicTable thead td {
+			font-weight: bold;
+		}
+		pre {
+			font-family: monospace;
+		}
+		.span-6 {
+			width: 235px;
+		}
+		.prepend-1 {
+			padding-left: 35px;
+		}
+		.very-important {
+			color: red;
+		}
+	</style>
+</head>
+
+
+<body>
+	<div class="container">
+	
+		<h3 class="center alt">&ldquo;WooCommerce Advanced Bulk Edit&rdquo; Documentation by George Iron & Yas G.</h3>
+		
+		<hr>
+		
+		<h1 class="center">&ldquo;WooCommerce Advanced Bulk Edit&rdquo;</h1>
+		
+		<div class="borderTop">
+			<div class="span-6 colborder info prepend-1">
+				<p class="prepend-top">
+					<strong>
+					Version: 5.1<br>
+					Created: 2014/06/16<br>
+					Updated: 2022/05/03<br>
+					By: George Iron & Yas G.<br>
+					Website: <a href="https://wpmelon.com">wpmelon.com</a><br>
+					Email: <a href="mailto:woocomstaff@gmail.com">woocomstaff@gmail.com</a>
+					</strong>
+				</p>
+			</div><!-- end div .span-6 -->		
+	
+			<div class="span-12 last">
+				<p class="prepend-top append-0">
+					Thank you for purchasing my plugin. If you have any questions that are beyond the scope of
+					this help file, please submit a support ticket <a target="_blank" href="https://wpmelon.com/r/support">here</a>.
+					Thanks so much!
+				</p>
+			</div>
+		</div><!-- end div .borderTop -->
+		
+		<hr>
+		
+		<h2 id="toc" class="alt">Table of Contents</h2>
+		<ol class="alpha">
+		<li><a href="#quickStartGuide">Quick Start Guide</a></li>
+          <li><a href="#products">Viewing products</a></li>
+		  <li><a href="#columns">Show/hide columns</a></li>
+          <li><a href="#editing">Editing products</a></li>
+		  <li><a href="#bulk">Using bulk edit</a></li>
+		  <li><a href="#attributes">Editing attributes</a></li>
+		  <li><a href="#delete">Deleting products</a></li>
+		  <li><a href="#custom">Custom fields</a></li>
+		  <li><a href="#csvupdate">CSV Update</a></li>
+          <li><a href="#changelog">Change log</a></li>
+          <li><a href="#credits">Sources and Credits</a></li>
+		</ol>
+		
+		<hr>        
+        
+        <h3 id="quickStartGuide"><strong>A) Quick Start Guide</strong> - <a href="#toc">top</a></h3>
+        <p>With the <b>Advanced Bulk Edit</b> plugin, you can easily edit your products both individually or in bulk. Editable fields are: <strong>Title</strong>, <strong>SKU</strong>, <strong>Category</strong>, <strong>Tags</strong>, <strong>Regular and sale price</strong>, <strong>Sale Price From</strong>, <strong>Sale Price To</strong>, <strong>Tax Status</strong>, <strong>Tax Class</strong>, <strong>Weight</strong>, <strong>Height</strong>, <strong>Width</strong>, <strong>Length</strong>, <strong>Stock Quantity</strong>, <strong>Stock Status</strong>, <strong>Manage Stock</strong>, <strong>Allow Backorders</strong>, <strong>Sold Individually</strong>, <strong>Shipping class</strong>, <strong>Purchase Note</strong>, <strong>Catalog Visibility</strong>, <strong>Product Status</strong>, <strong>Downloadable</strong>, <strong>Virtual</strong>, <strong>Down. Expiry</strong>, <strong>Down. Limit</strong>, <strong>Down. Files</strong>, <strong>Down. Type (schema)</strong>, <strong>Featured</strong>, <strong>Button text</strong>, <strong>Product URL</strong>.</p>
+		 <p class="thumbnailContainer">
+            <img class="thumbnail" src="assets/images/mainview.png">
+        </p>
+        <p><b>Installing the plugin:</b></p>
+        
+        <p>First of all, you need to download the plugin file and unzip it (if you are reading this, you have probably done so already).</p>
+		<p> Now you need to do <b>one</b> of the following:</p>
+        
+        <ol style="list-style-type: lower-alpha">
+            <li style="margin-bottom: 13px">            
+                <ol>
+                    <li>In the WordPress administration panel, open the <b>Plugins -> Add new -> Upload</b> page.</li>
+                    <li>Select and upload the <b>woocommerce-advanced-bulk-edit.zip</b> file (<b>the plugin files</b> on the picture above) and click <b>Activate Plugin</b>.</li>
+                </ol>
+            </li>
+		<!--</ol>-->
+		<p class="thumbnailContainer">
+            <img class="thumbnail" src="assets/images/installing.png">
+        </p>
+		<p class="thumbnailContainer">
+            <img class="thumbnail" src="assets/images/installing2.png">
+        </p>
+		  <!--<ol style="list-style-type: lower-alpha">-->
+            <li>
+                <ol>
+                    <li>Unzip the <b>woocommerce-advanced-bulk-edit.zip</b> archive into your WordPress plugins folder (located at <b>/wp-content/plugins/</b>).</li>
+                    <li>Open your browser and go to your WordPress admin panel.</li>
+                    <li>Open the <b>Plugins -> Installed plugins</b> page and activate the <b>WooCommerce Advanced Bulk Edit</b> plugin.</li>
+                </ol>
+            </li>
+        </ol>
+        
+        
+        <hr>
+        
+        <h3 id="products"><strong>B) Viewing products</strong> - <a href="#toc">top</a></h3>
+        
+        <p>
+            The plugin is accessible via <strong>Advanced Bulk Edit</strong> option of the <strong>Products</strong> menu.
+        </p>
+        
+        <p class="thumbnailContainer">
+            <img class="thumbnail" src="assets/images/editoricon.png">
+        </p>
+        
+        <p>
+           By default no filters are applied and when you click the <strong>Get Products</strong> button, all of the available products will be loaded into the editor.
+        </p>
+        
+        <p class="thumbnailContainer">
+            <img style="padding: 9px;" class="thumbnail" src="assets/images/maindlg.png">
+        </p>
+        
+        <p>
+            You can easily filter the products by title, regular and sale price, categories, attributes, sku and tags:
+        </p>
+        
+        <p class="thumbnailContainer">
+            <img style="padding: 9px;" class="thumbnail" src="assets/images/simpletable.png">
+        </p>
+        
+        <hr>
+		 <h3 id="columns"><strong>C) Viewing different product fields</strong> - <a href="#toc">top</a></h3>
+        
+        <p>
+            Be default only part of the available fields are shown in the spreadsheet. To view different ones, click the <strong>Show/Hide Fields</strong> button at the bottom and choose which columns to display.
+        </p>
+        
+        <p class="thumbnailContainer">
+            <img class="thumbnail" src="assets/images/columns.png">
+        </p>
+        
+        <hr>
+                      
+        <h3 id="editing"><strong>D) Editing products</strong> - <a href="#toc">top</a></h3>
+        
+        <p>
+            You can edit each product by simply clicking on its fields in the table. Type the new value and simply hit <strong>Enter</strong> or click on another cell.
+         </p>
+        <p class="thumbnailContainer">
+            <img class="thumbnail" src="assets/images/changecolor.png">
+        </p>
+        
+        <p>
+            After you've finished editing the field, a red triangle will appear on its top-left corner to indicate that this value has been changed and will be updated in the database.<br />
+			<strong>Note !</strong> Changes are saved via the <strong>Save Changes</strong> button or when navitaging to a different page of products !<br /><br />
+		</p>
+			<p class="thumbnailContainer">
+            <img class="thumbnail" src="assets/images/fontstyle.png">
+        </p>
+		<p>
+			It is easy to revert to the original value of any row. Simply select the row and then click the <strong>Selected Rows</strong> button (selected rows are the ones with a check mark at their start). Reverting is avalaible for changes <strong>prior each save</strong>.
+		</p>
+			<p class="thumbnailContainer">
+            <img class="thumbnail" src="assets/images/revertcell.png">
+        </p>
+		
+        <hr>
+        
+		 <h3 id="bulk"><strong>E) Using bulk edit</strong> - <a href="#toc">top</a></h3>
+        
+        <p>
+           To use the bulk edit functionality you have to select the rows first.
+         </p>
+        
+        <p class="thumbnailContainer">
+            <img class="thumbnail" src="assets/images/inslinks.png">
+        </p>
+		
+        <p>
+	     Click the <strong>Bulk Edit</strong> button to show the edit dialog. Select the appropriate options and type the new values.<br />
+        </p>
+		 <p class="thumbnailContainer">
+            <img class="thumbnail" src="assets/images/bulk1.png">
+        </p>
+		 <p>
+	     Click <strong>OK</strong> to confirm the changes.<br />
+        </p>
+		 <p class="thumbnailContainer">
+            <img class="thumbnail" src="assets/images/bulk2.png">
+        </p>
+         <p>
+	     <strong>Note!</strong>  To bulk edit images, select the products first and then click on one of the selected ones.<br />
+        </p>
+        <hr>
+		 <h3 id="attributes"><strong>F) Editing attributes</strong> - <a href="#toc">top</a></h3>
+        
+        <p>
+	     <strong>Note!</strong>  By default all attributes are dinamically retrieved and added as separate columns.They  <strong>are not visible</strong> and must be enabled via the "Show/Hide Fields" button first.<br />
+        </p>
+        
+        <p class="thumbnailContainer">
+            <img class="thumbnail" src="assets/images/enableattrs.png">
+        </p>
+		
+        <p>
+	     After that editing attributes is like any other taxonomy. Important note about the attribute handling by the plugin:<br />
+		 You can add values directly to variations, the plugin will check the parent if the attribute is visible for variations and will <strong>enable it/add it automatically</strong> - you don't have to add it to the parent first (if it is currently missing of course).<br />
+		  <strong>Note!</strong>  When you remove all attribute terms of variable products, the parent element has to be edited and saved separately.<br />
+        </p>
+		<hr>
+		 <h3 id="delete"><strong>G) Deleting products</strong> - <a href="#toc">top</a></h3>
+        
+        <p>
+	     <strong>Note!</strong> If you delete variations using the default "Move to Trash" option and the parent still <strong>exists</strong>, the variation <strong>will not be deleted</strong>. Variations only must be deleted with the "Delete permanently" option selected.
+        </p>
+        
+        <hr>
+        <h3 id="custom"><strong>H) Custom fields</strong> - <a href="#toc">top</a></h3>
+        
+        <p>
+           To enter your cutom fields, click the <strong>Custom fields</strong> button.<br />
+		   String and number meta fields are self-explanatory.  Let’s look at the dropdown select meta field. 
+<strong>Field name</strong> would be the field id, and the different options should be entered in the edit field below separated by commas. 
+
+         </p>
+         <p class="thumbnailContainer">
+            <img class="thumbnail" src="assets/images/custselect.png">
+        </p>
+        <p>
+	     Hierarchical custom taxonomies are category-like - new temrs can not be entered via the plugin, you can only choose existing ones.<br /><br />
+		 Normal custom taxonomies are tags-like - you can choose whether new terms can be inserted via the plugin.
+        </p>
+		 <p class="thumbnailContainer">
+            <img class="thumbnail" src="assets/images/custtax.png">
+        </p>
+        <hr>
+        <h3 id="csvupdate"><strong>I) Requirements for CSV Update</strong> - <a href="#toc">top</a></h3>
+        <p class="very-important">
+	     <strong>Note!</strong>  This feature has been deprecated in favor of WooCommerce's own CSV import/export.
+        </p>
+        <p>
+            You can show it by enabling Debug Mode in the settings.
+        </p>
+        <p>
+          <ul>
+			<li>
+                 The products that need to be updated should be loaded in the table editor.
+            </li>
+            <li>
+                 The csv file should have the same header columns as the one generated on exporting.
+            </li>
+             <li>
+                 The csv file MUST be comma-separated.
+            </li>
+            <li>
+                 The csv file MUST be UTF-8 encoded.
+            </li>
+            <li>
+                 Only text,number and select fields are updated.
+            </li>
+        </ul>
+
+         </p>
+		<hr>
+        <h3 id="changelog"><strong>G) Change log</strong> - <a href="#toc">top</a></h3>
+        <ul>
+        	<li>
+				<p>
+                    <h4>5.1 - 2022-05-03</h4>
+                    <ul>
+                        <li>New Feature: New custom field type for serialized data to CSV format.</li>
+                        <li>New Feature: You can now check for plugin updates directly from the plugin's admin page.</li>
+                        <li>Upgrade: Added "Select All" / "Deselect All" option in attributes selection dialog.</li>
+                        <li>Upgrade: Hovering product images now display a bigger picture.</li>
+                        <li>Upgrade: Some more styling applied to areas which were missed on the previous update.</li>
+                        <li>Fix: Not closing an HTML tag in Description causing a grid misformatting.</li>
+                        <li>Fix: Conflict with B2B Market plugin.</li>
+                        <li>Fix: Conflict with Tidio Chat plugin.</li>
+                        <li>Other small general bug fixes and improvements.</li>
+                    </ul>
+                </p>
+            </li>
+        	<li>
+				<p>
+                    <h4>5.0 - 2021-07-05</h4>
+                    <ul>
+                        <li>Refreshed the overall outlook of the plugin with a better design.</li>
+                        <li>New Feature: When generating variations, add option to set the variation regular price to be the regular price of the parent product.</li>
+                        <li>New Feature: Split variations to simple products.</li>
+                        <li>New Feature: Added new custom field type: Html Link</li>
+                        <li>New Feature: Added auto-complete to Up-sells and Cross-sells fields, so when you type, it will search in ID, Title and SKU fields and display a list of results to choose from.</li>
+                        <li>New Feature: Added option to make WCABE visible only for Administrator users.</li>
+                        <li>Upgrade: Filtering by custom fields now filters not only the parent product but the variations as well.</li>
+                        <li>Fixed: In some cases, filters combination didn't worked.</li>
+                        <li>Fixed: Conflicts with some 3rd party plugins and themes.</li>
+                        <li>Other small general bug fixes and improvements.</li>
+                    </ul>
+                </p>
+            </li>
+        	<li>
+				<p>
+                    <h4>4.6.1 - 2020-10-15</h4>
+                    <ul>
+                        <li>Fixed: Custom fields search returned no products.</li>
+                        <li>Fixed: Bulk Edit > Sale Price rounding option of 0.01 is now displayed.</li>
+                    </ul>
+                </p>
+            </li>
+        	<li>
+				<p>
+                    <h4>4.6 - 2020-09-24</h4>
+                    <ul>
+                        <li>Update: The Regular Price and Sale Price field filters now accepts more values, including an advanced "filter expression" that allows specifying ranges as well as single prices together. For more info, please check the new info sign located right next to the prices field filters.</li>
+                        <li>Update: Bulk Edit dialog > Regular Price > increase/decrease by %, added rounding option of 0.01.</li>
+                        <li>Update: Added an option to turn off the hints, because some 3rb party plugins, using the same library, were causing JS conflicts</li>
+                        <li>Upgrade: Added Slovenian translation.</li>
+                        <li>Upgrade: Added Slovak translation.</li>
+                        <li>Fixed: Bulk Edit dialog > Regular Price > increase by %, removed rounding when 'no-rounding' option is selected.</li>
+                        <li>As always, other small general bug fixes and improvements.</li>
+                    </ul>
+                </p>
+            </li>
+        	<li>
+				<p>
+                    <h4>4.5 - 2020-05-08</h4>
+                    <ul>
+                        <li>Upgrade: Added new custom field type: DateTime. You can now add fields of type DateTime, e.g. format: 2020-05-08 16:40:00.</li>
+                        <li>Upgrade: Added translations for the new hints.</li>
+                        <li>Upgrade: Better debug info.</li>
+                        <li>Upgrade: The variations titles are now fully displayed, instead of shortened like before.</li>
+                        <li>Upgrade: Hint now show/hide on click, so it will be more user-friendly.</li>
+                        <li>Update: The plugin menu is now the full name of the plugin: WooCommerce Advanced Bulk Edit.</li>
+                        <li>Fixed: Invalid check on calling WooCommerce action on save.</li>
+                        <li>Fixed: On the last date of a sale (Sale End Date) the sale price doesn't show.</li>
+                        <li>Fixed: JS error on bad formatted attachments upload dir.</li>
+                        <li>Fixed: Removing products from a group issue.</li>
+						<li>Other small general bug fixes and improvements.</li>
+                    </ul>
+                </p>
+            </li>
+        	<li>
+				<p>
+                    <h4>4.4.4 - 2019-11-29</h4>
+                    <ul>
+                        <li>Upgrade: The ID field filter now accepts more values, including an advanced "filter expression" that allows specifying ranges as well as single IDs together. For more info, please check the new info sign located right next to the ID field filter.</li>
+                        <li>Upgrade: The hints lib is now fully replaced with a new more advanced one. This will allow adding of more in-place help info, to help you understand easier the functionality of the plugin. Also added a few more info signs across the plugin.</li>
+                        <li>Fix: SKU field doesn't escape double comma properly.</li>
+                        <li>Fix: Tax Class field not getting all values.</li>
+                        <li>Fix: Select/Deselect Variations button displaying on top drop-down menus.</li>
+						<li>Other small general bug fixes and improvements.</li>
+                    </ul>
+                </p>
+            </li>
+        	<li>
+				<p>
+                    <h4>4.4.3 - 2019-05-21</h4>
+                    <ul>
+                        <li>
+                            New Feature: added an "unselect vars" button on the variable products to deselect all the variations of a product.
+                        </li>
+                        <li>
+                            Fix: for date fields not displaying date picker.
+                        </li>
+                        <li>
+                            Fix: for an issue with attributes not showing on WooCommerce 3.6+.
+                        </li>
+                        <li>
+                            Fix: for a problem where groups wouldn't load for any products in the list. Thanks to MastersIT for pointing that out.
+                        </li>
+						<li>
+                            Small general bug fixes and improvements.
+                        </li>
+                    </ul>
+                </p>
+            </li>
+        	<li>
+				<p>
+                    <h4>4.4.2 - 2018-10-05</h4>
+                    <ul>
+                        <li>
+                            Added Status "pending" to Bulk Edit dialog as it was previously available only in the grid built-in editor for the Status field.
+                        </li>
+                        <li>
+                            Fixed StockStatus not saving in some cases.
+                        </li>
+                        <li>
+                            Fixed not saving the change of Product Type, when option "Use API calls when possible" is enabled.
+                        </li>
+						<li>
+                            Fixed an issue with the grid where the current grid changes aren't commit when the grid loose focus. For example, if you edit a cell and then click "Save Changes" it does nothing as the grid didn't commit the changes when lost the focus and therefor "Save Changes" doesn't execute.
+                        </li>
+						<li>
+                            Small general bug fixes.
+                        </li>
+                    </ul>
+                </p>
+            </li>
+        	<li>
+				<p>
+                    <h4>4.4.1 - 2018-05-23</h4>
+                    <ul>
+						<li>
+                             "Use API calls when possible" on by default because WordPress 4.9.6 does not save some fields using the regular faster method.
+                        </li>
+                    </ul>
+                </p>
+            </li>
+        	<li>
+				<p>
+                    <h4>4.4 - 2018-05-13</h4>
+                    <ul>
+						<li>
+                             Optionally revert tags to text handling.
+                        </li>
+                        <li>
+                             Option to call the new API(woo > v3.0) calls when possible.
+                        </li>
+                        <li>
+                             Bug fixes and improvements.
+                        </li>
+                         <li>
+                             "Convert manually to UTF-8" is now called always and removed from options.
+                        </li>
+                    </ul>
+                </p>
+            </li>
+        	<li>
+				<p>
+                    <h4>4.3.5 - 2018-04-24</h4>
+                    <ul>
+						<li>
+                             Easy way to clear applied search filters.
+                        </li>
+                        <li>
+                             Fixed the publish date not getting saved (in 4.3.4).
+                        </li>
+                    </ul>
+                </p>
+            </li>
+        	<li>
+				<p>
+                    <h4>4.3.4 - 2018-02-22</h4>
+                    <ul>
+						<li>
+                             Updated the headers declaring WooCommerce support.
+                        </li>
+                        <li>
+                             New distinctive formatting for variations.
+                        </li>
+                        <li>
+                             Moved wp lister action calls in the woocommerce action.
+                        </li>
+                        <li>
+                             Support for the new on backorder stock status.
+                        </li>
+                        <li>
+                             Better compatibility with Prospress subscriptions.
+                        </li>
+                    </ul>
+                </p>
+            </li>
+        	<li>
+				<p>
+                    <h4>4.3 - 2017-12-18</h4>
+                    <ul>
+						<li>
+                             Added the new headers declaring WooCommerce support.
+                        </li>
+                        <li>
+                             Function 'Full View' added which expands the table to the maximum available height and hides the other controls.
+                        </li>
+                        <li>
+                             Better sorting of the variations.
+                        </li>
+                        <li>
+                             UTF-8 encoded slugs are now decoded in the table.
+                        </li>
+                        <li>
+                             Fixed a bug for custom fields with unsupported characters.
+                        </li>
+                        <li>
+                             Updated the spanish translation(thanks to Antonio Gutierrez).
+                        </li>
+                        <li>
+                             Now the product update WebHook is triggered.
+                        </li>
+                        <li>
+                             Confirmation dialog when active changes exist and the 'Get Products' button was clicked.
+                        </li>
+                    </ul>
+                </p>
+            </li>
+        	<li>
+				<p>
+                    <h4>4.2.5 - 2017-10-11</h4>
+                    <ul>
+						<li>
+                             Support for grouped products for woocommerce &gt;= 3.0.0.
+                        </li>
+                        <li>
+                             Function 'Invert selected' added.
+                        </li>
+                        <li>
+                             Fixed a php warning when the action calls are enabled (woo &gt;= 3.0.0).
+                        </li>
+                        <li>
+                             CSV Update is hidden by default and can be anbled when debug mode is on.
+                        </li>
+                        <li>
+                             Added actions for better compatibility with third-party plugins.
+                        </li>
+                        <li>
+                             Allow backorders is explicitly set to 'not allow' when creating variations.
+                        </li>
+                    </ul>
+                </p>
+            </li>
+        	<li>
+				<p>
+                    <h4>4.2.2 - 2017-05-02</h4>
+                    <ul>
+						<li>
+                             Bug fix for woocommerce &gt;= 3.0.0, stock status for variations must not use the new 'product_visibility' taxonomy.
+                        </li>
+                    </ul>
+                </p>
+            </li>
+        	<li>
+				<p>
+                    <h4>4.2.1 - 2017-04-07</h4>
+                    <ul>
+						<li>
+                             Quick bug fix for php &lt; 5.4 only, "find custom taxnomies" now skips the built-in woo 3.0 'product_visibility' taxonomy.
+                        </li>
+                    </ul>
+                </p>
+            </li>
+        	<li>
+				<p>
+                    <h4>4.2 - 2017-04-03</h4>
+                    <ul>
+                      	<li>
+                            Update the current product view with a csv file previously exported via the plugin.
+                        </li>
+                        <li>
+                            Support for custom attributes in the selection manager.
+                        </li>
+                         <li>
+                            Added option for renaming the attribute name of custom attributes in the bulk dialog.
+                        </li>
+                        <li>
+                            WPML: product loading now follows the currently selected language.
+                        </li>
+                        <li>
+                           Tags now support all functions of category and attribute editing(hierarchical taxonomy).
+                        </li>
+                        <li>
+                           Custom hierarchical taxonomies now support adding of new terms.
+                        </li>
+                        <li>
+                           Button for automatic discovery of custom fields without a product ID.
+                        </li>
+                        <li>
+                           Copy image file names to other fields in the bulk dialog.
+                        </li>
+                        <li>
+                           Cyrillic and turkish titles now generate nice looking english slugs.
+                        </li>
+                        <li>
+                           Support for WooCommerce 3.0. Due to technical limitations in the latest version, the stock status filter is removed.
+                        </li>
+                         <li>
+                           Dummy jQuery select2 function added to prevent javascript errors from third-party plugins.
+                        </li>
+                    </ul>
+                </p>
+            </li>
+        	<li>
+				<p>
+                    <h4>4.1.1 - 2016-10-26</h4>
+                    <ul>
+                      	<li>
+                            Maintenance update.
+                        </li>
+                        <li>
+                            Support for multiple skus in the search filter(comma separated).
+                        </li>
+                        <li>
+                            Fix: css issue that caused the date picker in sale start/end dates to remain hidden.
+                        </li>
+                    </ul>
+                </p>
+            </li>
+        	<li>
+				<p>
+                    <h4>4.1 - 2016-10-20</h4>
+                    <ul>
+                        <li>
+                            Support for new categories and attribute terms within the plugin.
+                        </li>
+                        <li>
+                            The bulk variations dialog now supports custom attributes.
+                        </li>
+                        <li>
+                            Added exact option for the title and sku search filters.
+                        </li>
+                        <li>
+                            Updated russian translation.
+                        </li>
+                        <li>
+                            Bug fixes.
+                        </li>
+                    </ul>
+                </p>
+            </li>
+        	<li>
+				<p>
+                    <h4>4.0.4 - 2016-09-23</h4>
+                    <ul>
+						<li>
+                            Redesigned bulk variations dialog, variations now show only the selected terms plus "link all variations" support.
+                        </li>
+                        <li>
+                            Revised: new variations create fewer empty keys in the database as in latest woocommerce versions.
+                        </li>
+                        <li>
+                            Bug fixes.
+                        </li>
+                    </ul>
+                </p>
+            </li>
+       		 <li>
+				<p>
+                    <h4>4.0.1 - 2016-08-01</h4>
+                    <ul>
+						<li>
+                            Maintenance update.
+                        </li>
+                        <li>
+                            Bug fix - html tags were stripped for custom fields on save.
+                        </li>
+                        <li>
+                            Revised: post author now retrieves only administrators, shop managers and vendors, deleted for variations.
+                        </li>
+                        <li>
+                            Revised: new installations now save changes in batches of 50 by default.
+                        </li>
+                    </ul>
+                </p>
+            </li>
+        	<li>
+				<p>
+                    <h4>4.0 - 2016-07-22</h4>
+                    <ul>
+						<li>
+                            Name(of the column) support for custom fields.
+                        </li>
+                        <li>
+                            Support for post_author and product_type added as a search filter.
+                        </li>
+                        <li>
+                            Attributes with > 2000 terms are automatically disabled for faster page load and can later be individually enabled. Also attributes with > 100 terms are listed for enable/disable.
+                        </li>
+                        <li>
+                            Deleting is done in batches of 50 to prevent php timeouts.
+                        </li>
+                        <li>
+                            "Delete images from server/media library" option now enhanced to delete images when permanently deleting products.
+                        </li>
+                        <li>
+                            Hovering a variable product generates a link on the right for quick selection of its variations.
+                        </li>
+                        <li>
+                            Better support of RTL languages.
+                        </li>
+                        <li>
+                            Sorting menu order will keep the variations grouped with the parent product.
+                        </li>
+                    </ul>
+                </p>
+            </li>
+        	<li>
+				<p>
+                    <h4>3.9.2 - 2016-05-22</h4>
+                    <ul>
+						<li>
+                            Revised: "call woocommerce save action" now off by default, some plugins do not check the POST data and could cause problems.
+                        </li>
+                        <li>
+                            All inputs in the bulk dialog now reset on opening.
+                        </li>
+                        <li>
+                            2 minor bug fixes.
+                        </li>
+                        <li>
+                            Revised: "Show/Hide Fields" now placed at the top.
+                        </li>
+                    </ul>
+                </p>
+            </li>
+        	<li>
+				<p>
+                    <h4>3.9 - 2016-03-05</h4>
+                    <ul>
+						<li>
+                            Performance improvements when retrieving products and other under the hood changes.
+                        </li>
+                        <li>
+                            Fill series for SKU(numbers).
+                        </li>
+                        <li>
+                            Replace descriptions via a regular expression in the bulk editor.
+                        </li>
+                        <li>
+                            Select AND or OR when searching with multiple workds for descriptions.
+                        </li>
+                        <li>
+                            Bug fixes.
+                        </li>
+                    </ul>
+                </p>
+            </li>
+        	<li>
+				<p>
+                    <h4>3.8.1 - 2016-08-03</h4>
+                    <ul>
+						<li>
+                            Maintenance update.
+                        </li>
+                        <li>
+                            Bug fix - tags did not save in latest update.
+                        </li>
+                        <li>
+                            Bug fix - going to a different page in paginated results failed if unsaved changes existed. 
+                            Changed from automatic saving to a confirmation message box.
+                        </li>
+                       
+                    </ul>
+                </p>
+            </li>
+        	<li>
+				<p>
+                    <h4>3.8- 2016-03-03</h4>
+                    <ul>
+						<li>
+                             Improved performance while adding large number of variations in the dialog.
+                        </li>
+                        <li>
+                             Hitting enter while the focus is on the search fields will initiate product retrieval.
+                        </li>
+                        <li>
+                             You can now stop actions done in batches.
+                        </li>
+                        <li>
+                             Detection of duplicate skus on save plus product duplication now skips skus.
+                        </li>
+                        <li>
+                             New translations.
+                        </li>
+                        <li>
+                             Select duplicate (short)descriptions.
+                        </li>
+                        <li>
+                             The 'link all variations' displays the variation count to be created.
+                        </li>
+                        <li>
+                             Parents of variation now force load in paginated views.
+                        </li>
+                        <li>
+                             Option to export only the visible fields to CSV.
+                        </li>
+                        <li>
+                             Multiline text in custom fields now follow the settings of the descriptions(in quick settings) for their editor.
+                        </li>
+                        <li>
+                             Bug fix:images stored in the main upload directory caused failure of finding their thumbnails for displaing in the editor.
+                        </li>
+                        <li>
+                             Bug fix:deleting table views was not functional.
+                        </li>
+                        <li>
+                             Bug fix:latest version failed to load non-standard tax classes.
+                        </li>
+                        <li>
+                             Compatibility with the taxonomies in the WooCommerce German Market plugin.
+                        </li>
+                    </ul>
+                </p>
+            </li>
+        	<li>
+				<p>
+                    <h4>3.7- 2015-12-29</h4>
+                    <ul>
+						<li>
+                             Option to use sql queries when deleting products(the default method in versions < 3.4).
+                        </li>
+                        <li>
+                             8 new search filters.
+                        </li>
+                        <li>
+                             Select items from a group.
+                        </li>
+                        <li>
+                             Copy values from variable products to their variations.
+                        </li>
+                        <li>
+                             Various fixes/tweaks.
+                        </li>
+                    </ul>
+                </p>
+            </li>
+        	<li>
+				<p>
+                    <h4>3.6.2 - 2015-11-09</h4>
+                    <ul>
+						<li>
+                             Fix: css conflict from a popular plugin that made the dialogs unusable.
+                        </li>
+                        <li>
+                             Search in the columns dialog/search fitlers.
+                        </li>
+                         <li>
+                             Revised: setting manual height of the search filters is no longer available - redundant after collapse/search filters.
+                        </li>
+                        <li>
+                             Minor fixes/tweaks when creating variations.
+                        </li>
+                    </ul>
+                </p>
+            </li>
+        	<li>
+				<p>
+                    <h4>3.6 - 2015-10-27</h4>
+                    <ul>
+						<li>
+                             Variations are now created in batches of 30.
+                        </li>
+                        <li>
+                             Option to skip duplicate variations.
+                        </li>
+                        <li>
+                             Link all variations.
+                        </li>
+                        <li>
+                             Quick actions in the selection dialog - select products/variations, duplicate products/variations.
+                        </li>
+                        <li>
+                             Fix: removing all attribute terms of a variable product did not refresh its meta key.
+                        </li>
+                        <li>
+                             Revised: you need to manually enable the "Used for variations" option before creating variations.
+                        </li>
+                        <li>
+                             Other minor fixes/tweaks.
+                        </li>
+                    </ul>
+                </p>
+            </li>
+        	<li>
+				<p>
+                    <h4>3.5.5 - 2015-09-30</h4>
+                    <ul>
+						<li>
+                             Option to save changes in multiple ajax calls to prevent php timeouts.
+                        </li>
+                        <li>
+                             Option to delete images from server/media library.
+                        </li>
+                        <li>
+                             Updated custom attributes support for newer woocommerce versions.
+                        </li>
+                        <li>
+                             Additional information in the image dialog.
+                        </li>
+                        <li>
+                             Improved product gallery images handling.
+                        </li>
+                        <li>
+                             Variation description added.
+                        </li>
+                        <li>
+                             Saving of the filter collapse state on saving changes.
+                        </li>
+                    </ul>
+                </p>
+            </li>
+        	<li>
+				<p>
+                    <h4>3.5 - 2015-09-16</h4>
+                    <ul>
+						<li>
+                             Option to use the default table editor when editing descriptions.
+                        </li>
+                        <li>
+                             Show selected products only.
+                        </li>
+                        <li>
+                             Custom attributes improvements -  bulk edit and create variations.
+                        </li>
+                        <li>
+                             Paginated products now begin with the newest first.
+                        </li>
+                        <li>
+                             Tweak - decreasing number values that result in less the 0 are now set to 0(the decrease was ignored before).
+                        </li>
+                        <li>
+                             First time users/installs - a hint to use the show/hide button, more default fields.
+                        </li>
+                        <li>
+                             Bug fix - the "Do not retrieve total number" was ignored on default product retrieval.
+                        </li>
+                    </ul>
+                </p>
+            </li>
+        	<li>
+				<p>
+                    <h4>3.4.4 - 2015-08-26</h4>
+                    <ul>
+						<li>
+                             Maintenance only.
+                        </li>
+                    </ul>
+                </p>
+            </li>
+        	<li>
+				<p>
+                    <h4>3.4.3 - 2015-07-15</h4>
+                    <ul>
+						<li>
+                             Fix: Title/descriptions search filters did not work with a single word and contains.
+                        </li>
+                        <li>
+                             Use wordpress editor for description editing.
+                        </li>
+                        <li>
+                             Option to allow editing of every field and bypass the built-in safety net.
+                        </li>
+                        <li>
+                             Show/Hide search filters.
+                        </li>
+                        <li>
+                             Quick Settings area - larger images on hover and bypass image dialog on click.
+                        </li>
+                    </ul>
+                </p>
+            </li>
+        	<li>
+				<p>
+                    <h4>3.4.1 - 2015-07-06</h4>
+                    <ul>
+						<li>
+                             Quick bug fix for php < 5.4 only: improper initialization of a php array.
+                        </li>
+                    </ul>
+                </p>
+            </li>
+        	<li>
+				<p>
+                    <h4>3.4 - 2015-07-05</h4>
+                    <ul>
+						<li>
+                             Basic support for custom attributes(edit in table only).
+                        </li>
+                        <li>
+                             New options - set search filters height, include all variations on custom taxonomy search.
+                        </li>
+                        <li>
+                             Optimized attribute retrieval\handling to be more ram efficient.
+                        </li>
+                        <li>
+                             Built-in woocommerce fields now support custom translation.
+                        </li>
+						<li>
+                             Tweak: checking "AND" works for attribute search filters.
+                        </li>
+						<li>
+                             Bug fix: linked editing did not work for variations in v. 3.3.2.
+                        </li>
+						<li>
+                             Various minor tweaks and fixes.
+                        </li>
+                       
+                    </ul>
+                </p>
+            </li>
+			<li>
+				<p>
+                    <h4>3.3.2 - 2015-05-28</h4>
+                    <ul>
+						<li>
+                             New option to increase row height -> bigger images, text in 2-3 rows.
+                        </li>
+						<li>
+                             Rounding to 10 and 100 added.
+                        </li>
+						<li>
+                             Bug fix: could not delete product gallery images in v. 3.3.
+                        </li>
+						<li>
+                             Tweak: Improved compatibility with third-party themes/plugins.
+                        </li>
+						<li>
+                             Tweak: Improved compatibility with non-english characters.
+                        </li>
+                    </ul>
+                </p>
+            </li>
+			<li>
+				<p>
+                    <h4>3.3 - 2015-05-24</h4>
+                    <ul>
+						<li>
+                             Save pre-sets of visible table fields.
+                        </li>
+						<li>
+                             Use multiple search words and regular expressions in the Selection Manager.
+                        </li>
+						<li>
+                             New option to call the wordpress action save_post.
+                        </li>
+						<li>
+                             Various fixes.
+                        </li>
+						<li>
+                             Tweak: Settings dialogs do not wait for the ajax call to finish when saving.
+                        </li>
+						<li>
+                             Tweak: Automatically resize dialogs in lower resolutions.
+                        </li>
+                    </ul>
+                </p>
+            </li>
+			<li>
+				<p>
+                    <h4>3.2.5 - 2015-04-26</h4>
+                    <ul>
+						<li>
+                             New search filter - shipping class.
+                        </li>
+						<li>
+                             Added "Uncategorized" for the category search filter.
+                        </li>
+						<li>
+                             Fix: Ability to set shipping class to none when editing individual items.
+                        </li>
+						<li>
+                             Fix: Custom taxonomies search filters did not retrieve some terms.
+                        </li>
+						<li>
+                             Fix: Set skus for variable products instead of their variations only.
+                        </li>
+						<li>
+                             Tweak: When searching for skus all variations are retrieved if the parent has it.
+                        </li>
+                    </ul>
+                </p>
+            </li>
+			<li>
+				<p>
+                    <h4>3.2.1 - 2015-04-09</h4>
+                    <ul>
+						<li>
+                             Maintenance only - bug fix - id and post title did not appear for fresh installations.
+                        </li>
+                    </ul>
+                </p>
+            </li>
+			<li>
+				<p>
+                    <h4>3.2 - 2015-04-08</h4>
+                    <ul>
+						<li>
+                            Copy field values in the bulk dialog.
+                        </li>
+						<li>
+                            Rounding when changing decimal numbers by percentage.
+                        </li>
+						<li>
+                            New search filters - ID, stock quantity/status.
+                        </li>
+						<li>
+                            Option to set manual table height.
+                        </li>
+						<li>
+                            Revised design: column ordering is saved.
+                        </li>
+						<li>
+                            Support for non-standard tax classes.
+                        </li>
+                    </ul>
+                </p>
+            </li>
+			<li>
+				<p>
+                    <h4>3.1.2 - 2015-03-27</h4>
+                    <ul>
+						<li>
+                            Maintenance only - minor bug fixes and improvements.
+                        </li>
+                    </ul>
+                </p>
+            </li>
+			<li>
+				<p>
+                    <h4>3.1 - 2015-03-20</h4>
+                    <ul>
+						<li>
+                            Duplication support.
+                        </li>
+						<li>
+                            Find custom taxonomies.
+                        </li>
+						<li>
+                            Spanish translation.
+                        </li>
+						<li>
+                            Bug fixes and improvements.
+                        </li>
+                    </ul>
+                </p>
+            </li>
+			<li>
+				<p>
+                    <h4>3.0 - 2015-03-08</h4>
+                    <ul>
+						<li>
+                            All custom fields are available for search filters.
+                        </li>
+						<li>
+                            Improved search in multiple selects.
+                        </li>
+						<li>
+                            Optionally require confirmation before saving.
+                        </li>
+                    </ul>
+                </p>
+            </li>
+			<li>
+				<p>
+                    <h4>2.9.7 - 2015-02-20</h4>
+                    <ul>
+						<li>
+                            Maintenance only - minor bug fixes and improvements.
+                        </li>
+                    </ul>
+                </p>
+            </li>
+			<li>
+				<p>
+                    <h4>2.9.5 - 2015-02-08</h4>
+                    <ul>
+						<li>
+                            New search filters - long and short description(not visible by default).
+                        </li>
+						<li>
+                            Bug fix: sometimes attributes not recognized on variation creation.
+                        </li>
+                    </ul>
+                </p>
+            </li>
+			<li>
+				<p>
+                    <h4>2.9 - 2015-02-05</h4>
+                    <ul>
+						<li>
+                            New search filters - sku and tags.
+                        </li>
+						<li>
+                            Show/hide most of the search filters.
+                        </li>
+						<li>
+                            New option for better compatibility with third-party cache plugins.
+                        </li>
+                    </ul>
+                </p>
+            </li>
+			<li>
+				<p>
+                    <h4>2.8.4 - 2015-02-02</h4>
+                    <ul>
+						<li>
+                            Improved attribute handling.
+                        </li>
+						<li>
+                            4 new options added.
+                        </li>
+						<li>
+                            Minor bug fixes and improvements.
+                        </li>
+                    </ul>
+                </p>
+            </li>
+			<li>
+				<p>
+                    <h4>2.8 - 2015-01-23</h4>
+                    <ul>
+						<li>
+                            Find custom meta fields from third-party plugins.
+                        </li>
+						<li>
+                            New option added to disable the automatic handling of attributes for variable products.
+                        </li>
+						<li>
+                            Improved multi-word search.
+                        </li>
+						<li>
+                            Minor bug fixes and improvements.
+                        </li>
+                    </ul>
+                </p>
+            </li>
+        </ul>
+        
+        <hr>
+		
+		<h3 id="credits"><strong>K) Sources and Credits</strong> - <a href="#toc">top</a></h3>
+		
+		<p>Many thanks go out to the following:</p>
+		
+        <ul>
+            <li><a href="https://github.com/mleibman/SlickGrid">Slick Grid</a></li>
+            <li><a href="http://harvesthq.github.io/chosen/">Chosen</a></li>
+            <li><a href="http://jquery.com/">The jQuery.js project</a></li>            
+            <li><a href="https://atomiks.github.io/tippyjs/">The Tippy.js project</a></li>
+        </ul>
+        
+		<hr>
+		
+		<p>Once again, thank you so much for purchasing this plugin. As I said at the beginning, I'd be glad to help you if you have any questions relating to this plugin. No guarantees, but I'll do my best to assist. If you have a more general question relating to the plugin on CodeCanyon, you might consider visiting the forums and asking your question in the "Item Discussion" section.</p> 
+		
+		<p class="append-bottom alt large"><strong>George Iron</strong></p>
+		<p><a href="#toc">Go To Table of Contents</a></p>
+		
+		<hr class="space">
+	</div><!-- end div .container -->
+</body>
+</html>

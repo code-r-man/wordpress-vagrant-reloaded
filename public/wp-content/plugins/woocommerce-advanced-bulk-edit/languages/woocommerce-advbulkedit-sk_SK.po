@@ -1,0 +1,935 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: woocommerce-advbulkedit\n"
+"POT-Creation-Date: 2018-03-06 22:21+0100\n"
+"PO-Revision-Date: 2020-07-04 18:39+0200\n"
+"Language-Team: Slovenčina\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.3\n"
+"X-Poedit-Basepath: .\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+"X-Poedit-KeywordsList: _e;__\n"
+"Last-Translator: Viktor Jančik <jancik@gecora.com>\n"
+"Language: sk_SK\n"
+"Report-Msgid-Bugs-To: \n"
+"X-Loco-Version: 2.3.2; wp-5.3.2\n"
+"X-Poedit-SearchPath-0: translate.php\n"
+"X-Poedit-SearchPath-1: bulkedit.php\n"
+
+#: bulkedit.php:310 bulkedit.php:312
+msgid "Product Short Description"
+msgstr "Krátky popis produktu"
+
+#: bulkedit.php:313 bulkedit.php:315
+msgid "Description"
+msgstr "Popis"
+
+#: bulkedit.php:316 bulkedit.php:318
+msgid "Image"
+msgstr "obrázok"
+
+#: bulkedit.php:319 bulkedit.php:321
+msgid "Product Gallery"
+msgstr "Galéria obrázkov"
+
+#: bulkedit.php:322 bulkedit.php:324
+msgid "SKU"
+msgstr "SKU/PLU"
+
+#: bulkedit.php:325 bulkedit.php:327
+msgid "Slug"
+msgstr "Slug"
+
+#: bulkedit.php:328 bulkedit.php:330
+msgid "Tags"
+msgstr "Čiarový kód"
+
+#: bulkedit.php:331 bulkedit.php:333 bulkedit.php:379 bulkedit.php:381
+msgid "Virtual"
+msgstr "Virtuálny"
+
+#: bulkedit.php:334 bulkedit.php:336 bulkedit.php:382 bulkedit.php:384
+msgid "Downloadable"
+msgstr "Stiahnuteľný"
+
+#: bulkedit.php:337 bulkedit.php:339
+msgid "Title"
+msgstr "Názov"
+
+#: bulkedit.php:340 bulkedit.php:342
+msgid "Categories"
+msgstr "Kategórie"
+
+#: bulkedit.php:343 bulkedit.php:345
+msgid "Regular Price"
+msgstr "Základná cena"
+
+#: bulkedit.php:346 bulkedit.php:348
+msgid "Sale Price"
+msgstr "Zľavnená cena"
+
+#: bulkedit.php:349
+msgid "Default Attributes"
+msgstr "Predvolené atribúty"
+
+#: bulkedit.php:351 bulkedit.php:4671
+msgid "Default"
+msgstr "Predvolené"
+
+#: bulkedit.php:351 bulkedit.php:1803 bulkedit.php:1935 bulkedit.php:4671
+#: translate.php:69
+msgid "Attributes"
+msgstr "Atribúty"
+
+#: bulkedit.php:352 bulkedit.php:354
+msgid "Product Type"
+msgstr "Typ produktu"
+
+#: bulkedit.php:355 bulkedit.php:357
+msgid "Menu order"
+msgstr "Zoradenie menu"
+
+#: bulkedit.php:358 bulkedit.php:360
+msgid "Enable reviews"
+msgstr "Povoliť recenzie"
+
+#: bulkedit.php:361 bulkedit.php:363
+msgid "Button text"
+msgstr "Text tlačidla"
+
+#: bulkedit.php:364 bulkedit.php:366
+msgid "Product URL"
+msgstr "URL Produktu"
+
+#: bulkedit.php:367 bulkedit.php:369
+msgid "Download Type"
+msgstr "Typ stiahnutia"
+
+#: bulkedit.php:370 bulkedit.php:372
+msgid "Downloadable Files"
+msgstr "Súbory na stiahnutie"
+
+#: bulkedit.php:373 bulkedit.php:375
+msgid "Download Limit"
+msgstr "Limit stiahnutí"
+
+#: bulkedit.php:376 bulkedit.php:378
+msgid "Download Expiry"
+msgstr "Stiahnutie expiruje"
+
+#: bulkedit.php:385 bulkedit.php:387
+msgid "Cross-Sells"
+msgstr "Medzi-predaje"
+
+#: bulkedit.php:388 bulkedit.php:390
+msgid "Up-Sells"
+msgstr "Navýšenie predaja"
+
+#: bulkedit.php:391 bulkedit.php:393
+msgid "Catalog visibility:"
+msgstr "VIditeľnosť katalógu:"
+
+#: bulkedit.php:394 bulkedit.php:396
+msgid "Status"
+msgstr "Status"
+
+#: bulkedit.php:397 bulkedit.php:399
+msgid "Purchase Note"
+msgstr "Poznámka k objednávke"
+
+#: bulkedit.php:400 bulkedit.php:402
+msgid "Shipping class"
+msgstr "Trieda prepravy"
+
+#: bulkedit.php:403 bulkedit.php:405
+msgid "Grouping"
+msgstr "Zoskupenie"
+
+#: bulkedit.php:406 bulkedit.php:408
+msgid "Sold Individually"
+msgstr "Predávať len individuálne"
+
+#: bulkedit.php:409 bulkedit.php:411
+msgid "Allow Backorders?"
+msgstr "Povoliť spätné objednávky?"
+
+#: bulkedit.php:412 bulkedit.php:414
+msgid "Manage Stock"
+msgstr "Správa skladu"
+
+#: bulkedit.php:416 bulkedit.php:418
+msgid "Stock Status"
+msgstr "Stav skladu"
+
+#: bulkedit.php:419 bulkedit.php:421 bulkedit.php:1877
+msgid "Stock Qty"
+msgstr "Počet na sklade"
+
+#: bulkedit.php:422 bulkedit.php:424
+msgid "Length"
+msgstr "Dĺžka"
+
+#: bulkedit.php:425 bulkedit.php:427
+msgid "Sale end date:"
+msgstr "Dátum konca výpredaja:"
+
+#: bulkedit.php:428 bulkedit.php:430
+msgid "Sale start date:"
+msgstr "Dátum začiatku výpredaja:"
+
+#: bulkedit.php:431 bulkedit.php:433
+msgid "Tax class"
+msgstr "Status dane"
+
+#: bulkedit.php:434 bulkedit.php:436
+msgid "Tax Status"
+msgstr "DPH status"
+
+#: bulkedit.php:437 bulkedit.php:439
+msgid "Featured"
+msgstr "Odporúčané"
+
+#: bulkedit.php:440 bulkedit.php:442
+msgid "Width"
+msgstr "Šírka"
+
+#: bulkedit.php:443 bulkedit.php:445
+msgid "Height"
+msgstr "Výška"
+
+#: bulkedit.php:446 bulkedit.php:448
+msgid "Weight"
+msgstr "Váha"
+
+#: bulkedit.php:449 bulkedit.php:451
+msgid "Publish Date"
+msgstr "Dátum publikovania"
+
+#: bulkedit.php:452 bulkedit.php:454
+msgid "Post Author"
+msgstr "Autor príspevku"
+
+#: bulkedit.php:455
+msgid "Post Type"
+msgstr "Typ príspevku"
+
+#: bulkedit.php:456
+msgid "Variation Description"
+msgstr "Popis varianty"
+
+#: bulkedit.php:457
+msgid "Custom Attributes"
+msgstr "Vlastné atribúty"
+
+#: bulkedit.php:458
+msgid "choose\\search"
+msgstr "vybrať \\hľadať"
+
+#: bulkedit.php:459
+msgid "Column Settings"
+msgstr "Nastavenie stĺpca"
+
+#: bulkedit.php:460
+msgid "Table Views"
+msgstr "Tabuľkové rozloženia"
+
+#: bulkedit.php:461 bulkedit.php:1308 translate.php:48
+msgid "Custom Fields"
+msgstr "Vlastné polia"
+
+#: bulkedit.php:462 bulkedit.php:1309 bulkedit.php:5206 translate.php:88
+msgid "Find Custom Fields"
+msgstr "Nájdi vlastné polia"
+
+#: bulkedit.php:463 bulkedit.php:1312 translate.php:49
+msgid "Plugin Settings"
+msgstr "Nastavenia pluginu"
+
+#: bulkedit.php:464
+msgid "Main Settings"
+msgstr "Hlavné nastavenia"
+
+#: bulkedit.php:465
+msgid "Search Fields"
+msgstr "Hľadaj polia"
+
+#: bulkedit.php:466 bulkedit.php:837
+msgid "Collapse Filters -"
+msgstr "Zavrieť filtre -"
+
+#: bulkedit.php:467
+msgid "Expand Filters +"
+msgstr "Rozbaliť filtre +"
+
+#: bulkedit.php:468
+msgid "Show larger images on hover"
+msgstr "Ukáž väčšie obrázky pri prejdení myšou"
+
+#: bulkedit.php:469
+msgid "Clicking on image goes straight to edit"
+msgstr "Kliknutie na obrázok ide hneď na úpravu"
+
+#: bulkedit.php:470
+msgid "remove name"
+msgstr "zmazať meno"
+
+#: bulkedit.php:471
+msgid "remove value"
+msgstr "zmazať hodnotu"
+
+#: bulkedit.php:472
+msgid "To change table view you need to save/revert changes first"
+msgstr ""
+
+#: bulkedit.php:473 bulkedit.php:1290 translate.php:37
+msgid "Selected rows for bulk editing"
+msgstr "Vyberte riadky pre hromadnú úpravu"
+
+#: bulkedit.php:474
+msgid "Saving batch"
+msgstr "Uložiť dávku"
+
+#: bulkedit.php:475
+msgid "Show Selected Only"
+msgstr "Ukáž iba zvolené"
+
+#: bulkedit.php:476
+msgid "Show All"
+msgstr "Ukázať všetky"
+
+#: bulkedit.php:477
+msgid "Link all variations"
+msgstr "Prepoj všetky varianty"
+
+#: bulkedit.php:478
+msgid "Skip duplicate variations on creation"
+msgstr "Preskoč duplicitné varianty pri vytvorení"
+
+#: bulkedit.php:479
+msgid "Use built-in editor when editing descriptions"
+msgstr "Použiť vstavaný editor pre úpravu popisov"
+
+#: bulkedit.php:480
+msgid "Bulk edit selected products"
+msgstr "Hromadná úprava zvolených produktov"
+
+#: bulkedit.php:481 bulkedit.php:483
+msgid "In Stock"
+msgstr "Na sklade"
+
+#: bulkedit.php:484 bulkedit.php:486 bulkedit.php:756
+msgid "Out of stock"
+msgstr "Nie je na sklade"
+
+#: bulkedit.php:755
+msgid "In stock"
+msgstr "Na sklade"
+
+#: bulkedit.php:825 translate.php:89
+msgid "Advanced Bulk Edit"
+msgstr "Gecora úprava produktov"
+
+#: bulkedit.php:833 bulkedit.php:1248 translate.php:36
+msgid "Save Changes"
+msgstr "Uložiť zmeny"
+
+#: bulkedit.php:838
+msgid "search filters"
+msgstr "filtre hľadania"
+
+#: bulkedit.php:846 bulkedit.php:1069 bulkedit.php:1143 bulkedit.php:1153
+#: bulkedit.php:3237 translate.php:8
+msgid "contains"
+msgstr "obsahuje"
+
+#: bulkedit.php:847 bulkedit.php:1070
+msgid "is exactly"
+msgstr "je presne"
+
+#: bulkedit.php:848 bulkedit.php:1071 bulkedit.php:1144 bulkedit.php:1154
+#: bulkedit.php:3238 translate.php:9
+msgid "does not contain"
+msgstr "neobsahuje"
+
+#: bulkedit.php:849 bulkedit.php:1072 bulkedit.php:1145 bulkedit.php:1155
+#: bulkedit.php:3239 translate.php:10
+msgid "starts with"
+msgstr "začína na"
+
+#: bulkedit.php:850 bulkedit.php:1073 bulkedit.php:1146 bulkedit.php:1156
+#: bulkedit.php:3240 translate.php:11
+msgid "ends with"
+msgstr "končí na"
+
+#: bulkedit.php:962 bulkedit.php:3274 bulkedit.php:3299 bulkedit.php:3324
+#: bulkedit.php:3349 bulkedit.php:3374 bulkedit.php:3399 bulkedit.php:3424
+#: bulkedit.php:3737 bulkedit.php:3762 bulkedit.php:3828 bulkedit.php:3853
+#: bulkedit.php:4001 bulkedit.php:4026 bulkedit.php:4074 bulkedit.php:4098
+#: bulkedit.php:4142 bulkedit.php:4171 bulkedit.php:4196
+msgid "AND"
+msgstr "A"
+
+#: bulkedit.php:1210 bulkedit.php:1863
+msgid "ID"
+msgstr "ID"
+
+#: bulkedit.php:1224 translate.php:35
+msgid "Get Products"
+msgstr "Načítaj produkty"
+
+#: bulkedit.php:1244 bulkedit.php:1930
+msgid "Variations"
+msgstr "Varianty"
+
+#: bulkedit.php:1252 translate.php:38
+msgid ""
+"Changes are saved on going to a different page of products, adding "
+"products/variations or via the 'Save Changes' button"
+msgstr ""
+
+#: bulkedit.php:1258 translate.php:47
+msgid "Show/Hide Fields"
+msgstr "Zobraziť/Skryť polia"
+
+#: bulkedit.php:1262 bulkedit.php:1933 bulkedit.php:2077 bulkedit.php:2207
+#: bulkedit.php:4992 bulkedit.php:5033 translate.php:27
+msgid "add"
+msgstr "pridať"
+
+#: bulkedit.php:1268 bulkedit.php:1931 translate.php:76
+msgid "Duplicate"
+msgstr "Duplikovať"
+
+#: bulkedit.php:1274 bulkedit.php:1908 bulkedit.php:4779 translate.php:29
+msgid "delete"
+msgstr "zmazať"
+
+#: bulkedit.php:1278 translate.php:6
+msgid "Selection Manager"
+msgstr "Spravovať označenia"
+
+#: bulkedit.php:1282 translate.php:7
+msgid "Bulk Edit"
+msgstr "Hromadná úprava"
+
+#: bulkedit.php:1287
+msgid "Quick Settings"
+msgstr "Základné nastavenia"
+
+#: bulkedit.php:1298 translate.php:39
+msgid "First"
+msgstr "Prvý"
+
+#: bulkedit.php:1298 translate.php:40
+msgid "Previous"
+msgstr "Predošlý"
+
+#: bulkedit.php:1298 translate.php:5
+msgid "Page"
+msgstr "Strana"
+
+#: bulkedit.php:1298 translate.php:41
+msgid "Next"
+msgstr "Ďalší"
+
+#: bulkedit.php:1298 translate.php:42
+msgid "Total records"
+msgstr "Spolu výsledkov"
+
+#: bulkedit.php:1299
+msgid "Revert to original value"
+msgstr "Vrátiť zmeny pre"
+
+#: bulkedit.php:1300 translate.php:44
+msgid "Active Cell"
+msgstr "Aktívna bunka"
+
+#: bulkedit.php:1301 translate.php:45
+msgid "Active Row"
+msgstr "Aktívny riadok"
+
+#: bulkedit.php:1302 translate.php:46
+msgid "Selected Rows"
+msgstr "Vybrané riadky"
+
+#: bulkedit.php:1303
+msgid "All Rows"
+msgstr "Všetky riadky"
+
+#: bulkedit.php:1307 translate.php:87
+msgid "Load/Save View"
+msgstr "Načítaj/Ulož Náhľad"
+
+#: bulkedit.php:1314 translate.php:50
+msgid "Export to CSV"
+msgstr "Export do CSV"
+
+#: bulkedit.php:1317
+msgid "Update via CSV"
+msgstr "Aktualizácia pomocou CSV"
+
+#: bulkedit.php:1333
+msgid "Update Table via CSV"
+msgstr "Aktualizácia tabuľky pomocou CSV"
+
+#: bulkedit.php:1334
+msgid "Update"
+msgstr "Aktualizovať"
+
+#: bulkedit.php:1340 translate.php:51
+msgid "Linked editing"
+msgstr "Vzájomná úprava"
+
+#: bulkedit.php:1343 translate.php:52
+msgid "Manual changes on any selected product will affect all of them"
+msgstr ""
+"Ak zaškrtnete túto možnosť, označíte 2 alebo viac produktov a budete meniť "
+"čokoľvek v jednom z nich, zmeny sa prejavia vo všetkých naraz"
+
+#: bulkedit.php:1351 translate.php:53
+msgid "All products in table"
+msgstr "Všetky produkty v tabuľke"
+
+#: bulkedit.php:1354 translate.php:54
+msgid "Selected products only"
+msgstr "Iba vybrané produkty"
+
+#: bulkedit.php:1360
+msgid "All fields"
+msgstr "Všetky polia"
+
+#: bulkedit.php:1363
+msgid "Visible fields only"
+msgstr "Len viditeľné polia"
+
+#: bulkedit.php:1368 translate.php:55
+msgid "Delimiter"
+msgstr "Oddeľovač"
+
+#: bulkedit.php:1377
+msgid "Use real meta values"
+msgstr "Použi reálne “meta” hodnoty"
+
+#: bulkedit.php:1386 translate.php:56
+msgid "Are you sure you want to continue ?"
+msgstr "Ste si istý, že chcete pokračovať?"
+
+#: bulkedit.php:1413 translate.php:57
+msgid "Limit on product retrieval"
+msgstr ""
+
+#: bulkedit.php:1434
+msgid "Save products in batches of"
+msgstr ""
+
+#: bulkedit.php:1454
+msgid "empty for a single ajax query"
+msgstr ""
+
+#: bulkedit.php:1469 translate.php:58
+msgid "Do not retrieve total number"
+msgstr ""
+
+#: bulkedit.php:1472 translate.php:59
+msgid ""
+"check if you have a large number of products and want to speed up the query"
+msgstr ""
+
+#: bulkedit.php:1487
+msgid ""
+"Delete images from server/media library when removing from product image/"
+"gallery or deleting product"
+msgstr ""
+
+#: bulkedit.php:1490
+msgid "This is not revertable ! Use with caution"
+msgstr ""
+
+#: bulkedit.php:1505
+msgid "Use sql queries when deleting products"
+msgstr ""
+
+#: bulkedit.php:1508
+msgid "will speed up the query"
+msgstr ""
+
+#: bulkedit.php:1523 translate.php:60
+msgid "Retrieve all variations on attribute search"
+msgstr ""
+
+#: bulkedit.php:1526 translate.php:61
+msgid "if the parent has it"
+msgstr ""
+
+#: bulkedit.php:1542 translate.php:62
+msgid "Get all children of selected category on search"
+msgstr ""
+
+#: bulkedit.php:1561
+msgid "Retrieve all variations on custom taxonomy search"
+msgstr ""
+
+#: bulkedit.php:1579 translate.php:74
+msgid "Disable attribute support"
+msgstr "Zakázať podporu vlastností"
+
+#: bulkedit.php:1599 translate.php:73
+msgid "Convert manually to UTF-8"
+msgstr "Konvertovať manuálne na UTF-8"
+
+#: bulkedit.php:1618 translate.php:72
+msgid "Do not check \"Used for variations\" automatically"
+msgstr ""
+
+#: bulkedit.php:1638 translate.php:67
+msgid "Call woocommerce action on save"
+msgstr "Zavolaj woocommerce action on save"
+
+#: bulkedit.php:1641 translate.php:68
+msgid "for better compatibility with third-party cache plugins"
+msgstr "pre lepšiu kompatibilitu s modulmi tretích strán"
+
+#: bulkedit.php:1657
+msgid "Call save_post action"
+msgstr "Zavolaj save_post action"
+
+#: bulkedit.php:1675 translate.php:75
+msgid "Require confirmation on save"
+msgstr "Vyžiadať potvrdenie pri ukladaní"
+
+#: bulkedit.php:1692
+msgid "Disable safety net on edit"
+msgstr ""
+
+#: bulkedit.php:1699
+msgid "Choose row height /needs page reload/"
+msgstr ""
+
+#: bulkedit.php:1721
+msgid "normal"
+msgstr "normálna"
+
+#: bulkedit.php:1722
+msgid "medium"
+msgstr "stredná"
+
+#: bulkedit.php:1723
+msgid "big"
+msgstr "veľký"
+
+#: bulkedit.php:1729
+msgid "Set manual search filters height"
+msgstr ""
+
+#: bulkedit.php:1750
+msgid "Set manual table height"
+msgstr ""
+
+#: bulkedit.php:1766
+msgid "px"
+msgstr "px"
+
+#: bulkedit.php:1781
+msgid "Enable debug mode"
+msgstr "Povoliť mód ladenia"
+
+#: bulkedit.php:1817 translate.php:70
+msgid "Regular/Sale Price"
+msgstr "Normálna/Výpredájová cena"
+
+#: bulkedit.php:1833 translate.php:71
+msgid "SKU/Tags"
+msgstr "SKU/Tagy"
+
+#: bulkedit.php:1847
+msgid "Long/Short Descriptions"
+msgstr "Dlhý/Krátky popis"
+
+#: bulkedit.php:1902 bulkedit.php:4991 bulkedit.php:5032 translate.php:22
+msgid "set new"
+msgstr "nastav nové"
+
+#: bulkedit.php:1903 translate.php:23
+msgid "prepend"
+msgstr "pred text"
+
+#: bulkedit.php:1904 translate.php:24
+msgid "append"
+msgstr "za text"
+
+#: bulkedit.php:1905 translate.php:25
+msgid "replace text"
+msgstr "zameniť text"
+
+#: bulkedit.php:1906 translate.php:13
+msgid "Ignore case"
+msgstr "Ignorovať prípad"
+
+#: bulkedit.php:1907 translate.php:26
+msgid "with text"
+msgstr "s textom"
+
+#: bulkedit.php:1923 bulkedit.php:2296 bulkedit.php:2330 bulkedit.php:2402
+#: bulkedit.php:2435 bulkedit.php:2468 bulkedit.php:2501 bulkedit.php:2534
+#: bulkedit.php:2551 bulkedit.php:2839 bulkedit.php:2862 bulkedit.php:2972
+#: translate.php:30
+msgid "increase by value"
+msgstr "navýšiť o hodnotu"
+
+#: bulkedit.php:1924 bulkedit.php:2297 bulkedit.php:2331 bulkedit.php:2334
+#: bulkedit.php:2403 bulkedit.php:2436 bulkedit.php:2469 bulkedit.php:2502
+#: bulkedit.php:2535 bulkedit.php:2552 bulkedit.php:2840 bulkedit.php:2863
+#: bulkedit.php:2973 translate.php:31
+msgid "decrease by value"
+msgstr "znížiť o hodnotu"
+
+#: bulkedit.php:1925 bulkedit.php:2298 bulkedit.php:2332 bulkedit.php:2404
+#: bulkedit.php:2437 bulkedit.php:2470 bulkedit.php:2503 bulkedit.php:2553
+#: bulkedit.php:2841 bulkedit.php:2864 translate.php:32
+msgid "increase by %"
+msgstr "zvýšiť podľa %"
+
+#: bulkedit.php:1926 bulkedit.php:2299 bulkedit.php:2333 bulkedit.php:2335
+#: bulkedit.php:2405 bulkedit.php:2438 bulkedit.php:2471 bulkedit.php:2504
+#: bulkedit.php:2554 bulkedit.php:2842 bulkedit.php:2865 translate.php:33
+msgid "decrease by %"
+msgstr "znížiť s %"
+
+#: bulkedit.php:1927
+msgid "Move to Trash"
+msgstr "Presunúť do koša"
+
+#: bulkedit.php:1928
+msgid "Delete Permanently"
+msgstr "Zmazať navždy"
+
+#: bulkedit.php:1929
+msgid "Products"
+msgstr "Produkty"
+
+#: bulkedit.php:1932 translate.php:77
+msgid "Time(s)"
+msgstr "Krát"
+
+#: bulkedit.php:1934 translate.php:63
+msgid ""
+"Note ! - Linked editing is turned on, all new variations will be added to "
+"all of the selected products. A large number of products * variations can "
+"cause a php timeout"
+msgstr ""
+
+#: bulkedit.php:1936
+msgid "Select"
+msgstr "Vybrať"
+
+#: bulkedit.php:1937 translate.php:64
+msgid "Bulk Add"
+msgstr "Hromadne pridať"
+
+#: bulkedit.php:1938 translate.php:65
+msgid "Add Single Variation"
+msgstr "Pridať samostatnú variantu"
+
+#: bulkedit.php:1939 translate.php:66
+msgid "Selected product does not have any attributes"
+msgstr "Vybrať produkty, ktoré nemajú žiadne vlastnosti"
+
+#: bulkedit.php:2078 bulkedit.php:2208 bulkedit.php:4993 bulkedit.php:5034
+#: translate.php:28
+msgid "remove"
+msgstr "zmazať"
+
+#: bulkedit.php:2311 bulkedit.php:2346 bulkedit.php:2416 bulkedit.php:2449
+#: bulkedit.php:2482 bulkedit.php:2515 bulkedit.php:2565
+msgid "no rounding"
+msgstr "žiadne zaokrúhľovanie"
+
+#: bulkedit.php:2312 bulkedit.php:2347 bulkedit.php:2417 bulkedit.php:2450
+#: bulkedit.php:2483 bulkedit.php:2516 bulkedit.php:2566
+msgid "round-up (100)"
+msgstr "zaokruhli hore (100)"
+
+#: bulkedit.php:2313 bulkedit.php:2348 bulkedit.php:2418 bulkedit.php:2451
+#: bulkedit.php:2484 bulkedit.php:2517 bulkedit.php:2567
+msgid "round-up (10)"
+msgstr "zaokruhli hore (10)"
+
+#: bulkedit.php:2314 bulkedit.php:2349 bulkedit.php:2419 bulkedit.php:2452
+#: bulkedit.php:2485 bulkedit.php:2518 bulkedit.php:2568
+msgid "round-up (1)"
+msgstr "zaokruhli hore (1)"
+
+#: bulkedit.php:2315 bulkedit.php:2350 bulkedit.php:2420 bulkedit.php:2453
+#: bulkedit.php:2486 bulkedit.php:2519 bulkedit.php:2569
+msgid "round-up (0.1)"
+msgstr "zaokruhli hore (0.1)"
+
+#: bulkedit.php:2316 bulkedit.php:2351 bulkedit.php:2421 bulkedit.php:2454
+#: bulkedit.php:2487 bulkedit.php:2520 bulkedit.php:2570
+msgid "round-down (0.1)"
+msgstr "zaokruhli dole (0.1)"
+
+#: bulkedit.php:2317 bulkedit.php:2352 bulkedit.php:2422 bulkedit.php:2455
+#: bulkedit.php:2488 bulkedit.php:2521 bulkedit.php:2571
+msgid "round-down (1)"
+msgstr "zaokruhli dole (1)"
+
+#: bulkedit.php:2318 bulkedit.php:2353 bulkedit.php:2423 bulkedit.php:2456
+#: bulkedit.php:2489 bulkedit.php:2522 bulkedit.php:2572
+msgid "round-down (10)"
+msgstr "zaokruhli dole (10)"
+
+#: bulkedit.php:2319 bulkedit.php:2354 bulkedit.php:2424 bulkedit.php:2457
+#: bulkedit.php:2490 bulkedit.php:2523 bulkedit.php:2573
+msgid "round-down (100)"
+msgstr "zaokruhli dole (100)"
+
+#: bulkedit.php:3202
+msgid "Quick actions"
+msgstr "Rýchle akcie"
+
+#: bulkedit.php:3203
+msgid "Select all products"
+msgstr "Vybrať všetky produkty"
+
+#: bulkedit.php:3204
+msgid "Select all variations"
+msgstr "Vybrať všetky varianty"
+
+#: bulkedit.php:3205
+msgid "Select duplicate products"
+msgstr "Vybrať duplicitné produkty"
+
+#: bulkedit.php:3207 bulkedit.php:3211
+msgid "same title"
+msgstr "rovnaký názov"
+
+#: bulkedit.php:3208 bulkedit.php:3212
+msgid "description"
+msgstr "popis"
+
+#: bulkedit.php:3209 bulkedit.php:3213
+msgid "short description"
+msgstr "krátky popis"
+
+#: bulkedit.php:3214
+msgid "Select duplicate variations"
+msgstr "Vybrať duplicitné varianty"
+
+#: bulkedit.php:3215
+msgid "same attributes"
+msgstr "rovnaké vlastnosti"
+
+#: bulkedit.php:3216
+msgid "Invert selected"
+msgstr "Obrátiť vybrané"
+
+#: bulkedit.php:3221 translate.php:14
+msgid "select"
+msgstr "vybrať"
+
+#: bulkedit.php:3222 translate.php:15
+msgid "deselect"
+msgstr "odznačiť"
+
+#: bulkedit.php:3225 translate.php:16
+msgid "products and variations"
+msgstr "produkty a varianty"
+
+#: bulkedit.php:3226 translate.php:17
+msgid "products only"
+msgstr "iba produkty"
+
+#: bulkedit.php:3227 translate.php:18
+msgid "variations only"
+msgstr "iba varianty"
+
+#: bulkedit.php:3229 translate.php:19
+msgid "which meet"
+msgstr "ktoré sa zhodujú"
+
+#: bulkedit.php:3231 translate.php:20
+msgid "any of the search criteria"
+msgstr "akékoľvek z hľadaných kritérii"
+
+#: bulkedit.php:3232 translate.php:21
+msgid "all of the search criteria"
+msgstr "všetky z hľadaných kritérii"
+
+#: bulkedit.php:3241 translate.php:12
+msgid "field is empty"
+msgstr "pole je prázdne"
+
+#: bulkedit.php:3273 bulkedit.php:3298 bulkedit.php:3323 bulkedit.php:3348
+#: bulkedit.php:3373 bulkedit.php:3398 bulkedit.php:3423 bulkedit.php:3736
+#: bulkedit.php:3761 bulkedit.php:3827 bulkedit.php:3852 bulkedit.php:4000
+#: bulkedit.php:4025 bulkedit.php:4073 bulkedit.php:4097 bulkedit.php:4141
+#: bulkedit.php:4170 bulkedit.php:4195
+msgid "split commas"
+msgstr "rozdeliť čiarky"
+
+#: bulkedit.php:3273 bulkedit.php:3298 bulkedit.php:3323 bulkedit.php:3348
+#: bulkedit.php:3373 bulkedit.php:3398 bulkedit.php:3423 bulkedit.php:3736
+#: bulkedit.php:3761 bulkedit.php:3827 bulkedit.php:3852 bulkedit.php:4000
+#: bulkedit.php:4025 bulkedit.php:4073 bulkedit.php:4097 bulkedit.php:4141
+#: bulkedit.php:4170 bulkedit.php:4195
+msgid "reg exp"
+msgstr ""
+
+#: bulkedit.php:3274 bulkedit.php:3299 bulkedit.php:3324 bulkedit.php:3349
+#: bulkedit.php:3374 bulkedit.php:3399 bulkedit.php:3424 bulkedit.php:3737
+#: bulkedit.php:3762 bulkedit.php:3828 bulkedit.php:3853 bulkedit.php:4001
+#: bulkedit.php:4026 bulkedit.php:4074 bulkedit.php:4098 bulkedit.php:4142
+#: bulkedit.php:4171 bulkedit.php:4196 translate.php:81
+msgid "OR"
+msgstr "ALEBO"
+
+#: bulkedit.php:4235
+msgid "show all"
+msgstr "ukáž všetko"
+
+#: bulkedit.php:4751 translate.php:83
+msgid "Save to new view"
+msgstr "Uložiť do nového zobrazenia"
+
+#: bulkedit.php:4758 translate.php:82
+msgid "Load existing view"
+msgstr "Načítaj existujúce zobrazenie"
+
+#: bulkedit.php:4765 translate.php:84
+msgid "Save to exisiting view /replace/"
+msgstr "Uložiť to existujúceho zobrazenia (nahradiť - prepísať)"
+
+#: bulkedit.php:4773 translate.php:85
+msgid "Edit View List"
+msgstr "Upraviť listové zobrazenie"
+
+#: bulkedit.php:4776 translate.php:86
+msgid "Rename"
+msgstr "Premenovať"
+
+#: bulkedit.php:5202
+msgid "Add Custom Field"
+msgstr "Pridať vlastné pole"
+
+#: bulkedit.php:5206 translate.php:80
+msgid "Find Taxonomies"
+msgstr "Nájdi taxonómie"
+
+#: bulkedit.php:5206 translate.php:78
+msgid "Find custom fields by product ID"
+msgstr "Nájdi vlastné polia podľa ID produktu"
+
+#: bulkedit.php:5206 translate.php:79
+msgid "Find"
+msgstr "Nájdi"
+
+#: translate.php:34
+msgid "delete value"
+msgstr "zmazať hodnotu"
+
+#: translate.php:43
+msgid "Revert to original vaue"
+msgstr "Vrátiť na pôvodné hodnoty"
